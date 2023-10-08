@@ -5,9 +5,7 @@
 {
     overflow: hidden;
 }
-.container{
-    border: solid 6px white;
-}
+
 .wrapper
 {
     background-color: #131519;
@@ -29,7 +27,6 @@
     width: 200px;
     margin: 20px auto;
    
- 
 }
 h3{
     border: none;
@@ -58,6 +55,7 @@ h3{
     display: flex;
     flex-wrap: wrap;
     margin: auto;
+ 
 }
 
 .grid div{
@@ -98,3 +96,18 @@ h3{
       margin: 12px auto; 
     }
 }
+@media (max-width:260px)
+{
+    *
+    {
+        transform: scale(0.95);
+    }
+}
+@media (max-width:215px)
+{
+    *
+    {
+        transform: scale(0.9);
+    }
+}
+
