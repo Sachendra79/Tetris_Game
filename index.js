@@ -93,7 +93,7 @@ function stop(){
     if(currentShape.some(index => squares[curPos + index + width].classList.contains('freeze'))) {
         currentShape.forEach(index => squares[curPos + index].classList.add('freeze'))
 
-        // start a new shape falling
+        // new block neeche gire
         random = Math.floor(Math.random()*theShapes.length)
         curRot = 0
         currentShape = theShapes[random][curRot]
@@ -105,8 +105,7 @@ function stop(){
         
     }
 }
-
-// control the game
+//keyboard se move krne ke liye 
 function control(e){
     if(e.keyCode === 37){
         moveLeft()
@@ -124,13 +123,13 @@ function control(e){
 
 window.addEventListener("keydown", control);
 
-// Control shapes in phone
+// mobile mai nmove krne ke liye
 leftBtn.addEventListener("click", moveLeft);
 reightBtn.addEventListener("click", moveRight);
 downBtn.addEventListener("click", moveDown)
 rotateBtn.addEventListener("click", rotate)
 
-// moveleft funtion
+//left move krne ke liye
 function moveLeft(){
     erase()
 
@@ -146,7 +145,7 @@ function moveLeft(){
 }
 
 
-// moveRight funtion
+// right move krne ke liye
 function moveRight(){
     erase()
 
@@ -161,7 +160,7 @@ function moveRight(){
     draw()
 }
 
-// Rotate function
+// rotate krne ke liye
 function rotate(){
     erase()
     curRot++ 
@@ -172,7 +171,7 @@ function rotate(){
     draw()
 }
 
-// add functionality to pause button
+// game ko pause krne ke liye
 function pause(){
     if(timer){
         clearInterval(timer)
@@ -188,7 +187,7 @@ function pause(){
 
 startBtn.addEventListener("click" , pause)
 
-// game over funtion
+//game pura karne ke liye
 function gameOver(){
     if(currentShape.some(index => squares[curPos + index].classList.contains('freeze'))){
         score.innerHTML = "Game Over"
@@ -196,7 +195,7 @@ function gameOver(){
     }
 }
 
-// add Score
+//  Score badane ke liye
 function addScore(){
     for(let i=0;i<199; i += width){
         const row = [i ,i+1, i+2, i+3, i+4, i+5, i+6 ,i+7, i+8, i+9];
